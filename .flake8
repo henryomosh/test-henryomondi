@@ -1,0 +1,5 @@
+[flake8]
+max-line-length = 120
+exclude = *migrations*,fortytwo_test_task/settings/__init__.py,fortytwo_test_task/settings/test.py
+max-complexity = 6
+extend-ignore = C812  # "missing trailing comma" rule, black handles it

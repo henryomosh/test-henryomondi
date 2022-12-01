@@ -1,0 +1,5 @@
+# Uncomment the following to deploy to Heroku
+# import dj_database_url
+#
+# DATABASE_URL = 'postgres://...' # copy from heroku config -s | grep DATABASE_URL
+# DATABASES['default'] = dj_database_url.config()

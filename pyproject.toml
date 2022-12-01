@@ -1,0 +1,30 @@
+[tool.black]
+line-length = 120
+target-version = ['py37']
+include = '\.pyi?$'
+exclude = '''
+(
+  /(
+      \.eggs         # exclude a few common directories in the
+    | \.git          # root of the project
+    | \.hg
+    | \.mypy_cache
+    | \.tox
+    | \.venv
+    | _build
+    | buck-out
+    | build
+    | dist
+    | migrations/.*
+  )/
+)
+'''
+
+[tool.coverage.run]
+branch = true
+source = ['apps/']
+omit = ['*/migrations/*', '*/tests/*', '*/apps.py', '__init__.py',]
+
+[tool.coverage.report]
+fail_under = 95
+exclude_lines = ['def __str__']
